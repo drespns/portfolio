@@ -1,0 +1,33 @@
+Aprender Kubernetes si ya sabes Docker
+Saber Docker es un excelente punto de partida, pero Kubernetes añade una capa de orquestación y gestión que es crucial para despliegues modernos y escalables. Aquí te explico por qué es interesante aprender Kubernetes:
+
+Escalabilidad:
+
+Kubernetes puede escalar tus aplicaciones automáticamente en función de la demanda, creando o eliminando contenedores según sea necesario.
+
+Gestión de Contenedores en Producción:
+
+Kubernetes maneja la programación y despliegue de contenedores en un clúster de servidores, asegurando alta disponibilidad y tolerancia a fallos.
+
+Redes y Balanceo de Carga:
+
+Kubernetes tiene soluciones integradas para redes y balanceo de carga que facilitan la comunicación entre contenedores y servicios.
+
+Actualizaciones y Rollbacks:
+
+Kubernetes permite actualizar tus aplicaciones con estrategias de despliegue como rolling updates y canary deployments, y puede revertir cambios si algo sale mal.
+
+Self-healing:
+
+Kubernetes monitorea el estado de los contenedores y los reinicia si detecta que fallaron, asegurando que tus aplicaciones se mantengan operativas.
+
+Almacenamiento Persistente:
+
+Kubernetes proporciona abstracciones para gestionar almacenamiento persistente, lo cual es esencial para aplicaciones que necesitan guardar datos de manera confiable.
+
+Extensibilidad y Ecosistema:
+
+Kubernetes tiene un amplio ecosistema de herramientas y extensiones que permiten personalizar y mejorar la plataforma según tus necesidades específicas.
+
+Resumen
+Si bien Docker se enfoca en la creación y administración de contenedores, Kubernetes se encarga de orquestar esos contenedores en un entorno de producción. Conocer ambas tecnologías te permitirá construir, desplegar y gestionar aplicaciones de manera eficiente y escalable, aprovechando lo mejor de cada herramienta.

@@ -1,0 +1,54 @@
+Para hacer que un build.sh sea multiplataforma, debes considerar las diferencias entre los sistemas operativos. Los comandos y herramientas pueden variar entre Unix/Linux y Windows. Aquí hay algunas estrategias para manejar estas diferencias:
+
+Detectar el Sistema Operativo:
+
+Puedes usar scripts para detectar el sistema operativo y ejecutar comandos específicos para cada uno.
+
+sh
+Copiar código
+#!/bin/bash
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # Linux
+    echo "Running on Linux"
+    # Linux-specific commands
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    echo "Running on macOS"
+    # macOS-specific commands
+elif [[ "$OSTYPE" == "cygwin" ]]; then
+    # POSIX compatibility layer and Linux environment emulation for Windows
+    echo "Running on Cygwin"
+    # Cygwin-specific commands
+elif [[ "$OSTYPE" == "msys" ]]; then
+    # Lightweight shell and GNU utilities compiled for Windows (part of MinGW)
+    echo "Running on MinGW/MSYS"
+    # MinGW/MSYS-specific commands
+elif [[ "$OSTYPE" == "win32" ]]; then
+    # Windows
+    echo "Running on Windows"
+    # Windows-specific commands
+else
+    echo "Unknown OS"
+fi
+Usar herramientas multiplataforma:
+
+Utiliza herramientas que funcionen en múltiples sistemas operativos. Por ejemplo, lenguajes como Python y Node.js son multiplataforma, y sus herramientas de construcción (pip, npm) también lo son.
+
+Scripts específicos por plataforma:
+
+Divide tu script en varios archivos específicos para cada plataforma. Luego, usa un script principal para detectar la plataforma y ejecutar el script correspondiente.
+
+sh
+Copiar código
+#!/bin/bash
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    ./build-linux.sh
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    ./build-macos.sh
+elif [[ "$OSTYPE" == "msys" ]]; then
+    ./build-windows.sh
+else
+    echo "Unsupported OS"
+fi
